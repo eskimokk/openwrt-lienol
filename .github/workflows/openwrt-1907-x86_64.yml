@@ -89,14 +89,14 @@ jobs:
       - name: Upload artifact firmware squashfs
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt firmware - squashfs image/vmdk
+          name: OpenWrt firmware - squashfs image+vmdk
           path: |
             ./bin/targets/x86/64/openwrt-x86-64-combined-squashfs.*
         
       - name: Upload artifact firmware squashfs-efi
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt firmware - squashfs-efi image/vmdk
+          name: OpenWrt firmware - squashfs-efi image+vmdk
           path: |
             ./bin/targets/x86/64/openwrt-x86-64-combined-squashfs-efi.*
             
