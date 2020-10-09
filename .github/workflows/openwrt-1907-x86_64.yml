@@ -86,26 +86,17 @@ jobs:
           name: Openwrt build files
           path: ./tree.txt
       
-      - name: Upload artifact firmware ext4
-        uses: actions/upload-artifact@master
-        with:
-          name: OpenWrt firmware - ext4 image
-          path: ./bin/targets/x86/64/openwrt-x86-64-combined-ext4.img.gz
-
       - name: Upload artifact firmware squashfs
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt firmware - squashfs image
-          path: ./bin/targets/x86/64/openwrt-x86-64-combined-squashfs.img.gz
-
-      - name: Upload artifact firmware vmdk-ext4
-        uses: actions/upload-artifact@master
-        with:
-          name: OpenWrt firmware - vmdk-ext4
-          path: ./bin/targets/x86/64/openwrt-x86-64-combined-ext4.vmdk
+          name: OpenWrt firmware - squashfs image/vmdk
+          path: |
+            ./bin/targets/x86/64/openwrt-x86-64-combined-squashfs.*
         
-      - name: Upload artifact firmware vmdk-squashfs
+      - name: Upload artifact firmware squashfs-efi
         uses: actions/upload-artifact@master
         with:
-          name: OpenWrt firmware - vmdk-squashfs
-          path: ./bin/targets/x86/64/openwrt-x86-64-combined-squashfs.vmdk
+          name: OpenWrt firmware - squashfs-efi image/vmdk
+          path: |
+            ./bin/targets/x86/64/openwrt-x86-64-combined-squashfs-efi.*
+            
